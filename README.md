@@ -1,6 +1,6 @@
 # Logging for ML Models
 
-Logging for machine learning models.
+Logging for machine learning models - Precisely for a model predicting insurance charges
 
 This code is used in this [blog post](https://www.tekhnoal.com/logging-for-ml-models.html).
 
