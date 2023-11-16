@@ -1,5 +1,5 @@
 # syntax=docker/dockerfile:1
-FROM python:3.9-slim as base
+FROM tiangolo/uvicorn-gunicorn-fastapi:python3.9 as base
 
 WORKDIR /dependencies
 
@@ -14,7 +14,7 @@ ENV PATH="$VIRTUAL_ENV/bin:$PATH"
 
 # installing dependencies
 COPY ./service_requirements.txt ./service_requirements.txt
-RUN pip install --no-cache -r service_requirements.txt
+RUN pip install -r service_requirements.txt
 
 FROM base as runtime
 
@@ -36,7 +36,7 @@ WORKDIR /service
 
 # install packages
 RUN apt-get update -y && \
-    apt-get install -y --no-install-recommends libgomp1 && \
+    apt-get install -y --no-install-recommends libgomp1 gcc python3-dev && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 

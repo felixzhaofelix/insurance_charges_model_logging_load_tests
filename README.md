@@ -57,7 +57,13 @@ pip install pip-tools
 pip-compile requirements.in
 pip install -r requirements.txt
 ```
-and of course in the rest of the files I replaced the credit risk model with the insurance charges model.
+and of course in the rest of the files I replaced occurrences of credit risk model with insurance charges model.
+As result of such, all dependencies to run the logger and the insruance charges model are installed.
+We are now ready to tackle the ->
+## -> Integration of the logging decorator to insurance charges model!
 
-
+Modifications to make this part run is described in this file:
+```bash
+logging-for-ml-models/blogpost/blog_post.ipynb
+```
 

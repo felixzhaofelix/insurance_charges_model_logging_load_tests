@@ -57,10 +57,10 @@ spec:
           resources:
             requests:
               cpu: "100m"
-              memory: "250Mi"
+              memory: "500Mi"  # Adjusted this value based on my application's requirements
             limits:
               cpu: "200m"
-              memory: "250Mi"
+              memory: "2Gi"    # Adjusted this value based on my application's requirements
           env:
             - name: REST_CONFIG
               value: ./configuration/kubernetes_rest_config.yaml
