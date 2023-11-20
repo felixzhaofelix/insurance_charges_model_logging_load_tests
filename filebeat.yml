@@ -1,0 +1,17 @@
+filebeat.inputs:
+  - type: container
+    paths:
+      - /service/logs/*.log
+    processors:
+      - add_docker_metadata:
+          host: "unix:///var/run/docker.sock"
+    multiline.pattern: '^[[:space:]]'
+    multiline.negate: false
+    multiline.match: after
+
+output.elasticsearch:
+  hosts: ["elasticsearch:9200"]
+  index: "filebeat-%{[agent.version]}-%{+yyyy.MM.dd}"
+
+setup.ilm.enabled: false
+

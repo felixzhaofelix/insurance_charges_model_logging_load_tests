@@ -2,6 +2,8 @@
 
 Logging for machine learning models - Precisely for a model predicting insurance charges
 
+# Last updated: Nov 19th 2021 at 11:50pm
+
 ## Requirements
 
 - Python 3.9 or above (I used 3.9.6)
@@ -128,7 +130,6 @@ because the former was not compatible with the new packages
 ![External Image](images/tiangolo.png)
 -But then I had to change the base image template back to python3.9-slim because that template was recommanded against by the author for Kubernetes deployment.-
 
-
 ![Externel Image](images/docker_image_arm64.png)
 -Instead of using the default platform, we have specify the platform to be ARM64 for M1 Macs and later
 
@@ -172,7 +173,12 @@ Up until this date I have not been able to deploy the service on Kubernetes, I h
 
 -Sadly none of these attempts were successful, this same error keeps showing up-
 
-### Integrating 
+### Integrating Elastic Search, Kibana and Filebeat using Docker Compose
+
+I used Docker compose with images of these three services to integrate them together, details in the ipynb file:
+
+![External Image](images/sample_elastic_minikube.jpg)
+-Here's what it would look like if the service was deployed on Kubernetes-
 
 ## Final Note
 Outcomes of my modifications as Nov 2023 for the project "logging-of-regression-model-felixzhaofelix"
