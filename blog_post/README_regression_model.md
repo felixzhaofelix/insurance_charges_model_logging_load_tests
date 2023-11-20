@@ -134,6 +134,9 @@ and modlify the code in the constructor like this:
 ```bash
 make test
 ```
+Now all the tests should pass
+
+![External Image](images/test_passed.png)
 
 clean up the unit tests
 ```bash
@@ -147,6 +150,12 @@ To start the service locally, execute these commands:
 ```bash
 uvicorn rest_model_service.main:app --reload
 ```
+See images showing the service running at logging-for-regression-model-felixzhaofelix/images
+
+After making sure that service is running successfully, I recompiled the service_requirements.in
+and the service_requirements.txt files to make sure that the versions of the packages are the same
+as the content of requirements.in and requirements.txt files to build the Docker image.
+
 
 ## Generating an OpenAPI Specification
 
