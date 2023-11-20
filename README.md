@@ -155,6 +155,8 @@ because the former was not compatible with the new packages
 
 Up until this date I have not been able to deploy the service on Kubernetes, I have tried the following:
 
+-Inspecting carefully pod logs and deployment logs and their respective events
+
 -Using the default base image template tiangolo/uvicorn-gunicorn-fastapi:python3.9
 
 -Using the base image template python3.9-slim
@@ -166,6 +168,8 @@ Up until this date I have not been able to deploy the service on Kubernetes, I h
 -Allocating more memory to miniKube (6122MB and 8192MB) 
 
 -Reconfirm repeatedly every relevant file in the deployment process
+
+![External Image](images/deployment_failure.png)
 
 Sadly none of these attempts were successful, I will keep trying and update this README.md file when I have a solution.
 
