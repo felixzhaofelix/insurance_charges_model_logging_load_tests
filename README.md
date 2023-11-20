@@ -23,7 +23,6 @@ And follow the instructions on its README.md, here's  a copy of it:
 ```bash
 blog_post/README_regression_model.md
 ```
-
 [Visit regression-model-fixed](https://github.com/felixzhaofelix/regression-model-fixed/blob/master/README.md)
 
 
@@ -171,7 +170,7 @@ Up until this date I have not been able to deploy the service on Kubernetes, I h
 
 ![External Image](images/deployment_failure.png)
 
-Sadly none of these attempts were successful, I will keep trying and update this README.md file when I have a solution.
+-Sadly none of these attempts were successful, this same error keeps showing up-
 
 ### Integrating 
 

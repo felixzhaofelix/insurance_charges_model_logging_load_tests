@@ -108,6 +108,19 @@ and run all the cells in each file sequentially and a new file will be created i
 ```bash
 regression-model/model2023.joblib
 ```
+Below depicts the model training results:
+
+![External Image](images/model_trained.png)
+-newly added model2023-
+
+![External Image](images/model_graph.png)
+-new model graph-
+
+![External Image](images/model_prediction_error.png)
+-new model prediction error-
+
+
+
 
 2.1 You can also rerun the last cell in regression-model/model_training.ipynb to create the model in a different name
 like this:
@@ -116,7 +129,7 @@ joblib.dump(model, "yourModelName.joblib")
 ```
 2.2 Here's the code to load the model in the service in case some modifications are made to the model:
 Open the file: regression-model/insurance_charges_model/prediction/model.py
-and modlify the code in the constructor like this:
+and modify the code in the constructor like this:
 ```python
 # def __init__(self):
 #     """Class constructor that loads and deserializes the model parameters.
@@ -126,7 +139,7 @@ and modlify the code in the constructor like this:
 # 
 #     """
 #     dir_path = os.path.dirname(os.path.dirname(os.path.realpath(__file__)))
-#     with open(os.path.join(dir_path, "model_files", "1", "yourModelName.joblib"), 'rb') as file:
+#     with open(os.path.join(dir_path, "model_files", "1", "model2023.joblib"), 'rb') as file:
 #         self._svm_model = joblib.load(file)
 ```
 
