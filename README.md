@@ -99,15 +99,15 @@ logging-for-ml-models/blogpost/blog_post.ipynb
 The following steps are described in the blog_post.ipynb file:
 
 Up until this cell nothing has been modified:
-```ipynb
+```bash
 !pip install -e git+https://github.com/felixzhaofelix/regression-model-fixed#egg=insurance_charges_model
 ```
 and here:
-```ipynb
+```python
 from insurance_charges_model.prediction.model import InsuranceChargesModel
 ```
 and here:
-```ipynb
+```python
 from insurance_charges_model.prediction.schemas import InsuranceChargesModelInput
 
 model_input = InsuranceChargesModelInput(
