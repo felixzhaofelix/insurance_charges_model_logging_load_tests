@@ -4,7 +4,7 @@
 #
 #    pip-compile requirements.in
 #
--e git+https://github.com/felixzhaofelix/regression-model-less-requirements#egg=insurance_charges_model
-    # via -r requirements.in
+-e git+https://github.com/felixzhaofelix/regression-model-fixed#egg=insurance_charges_model
+    # via -r service_requirements.in
 python-json-logger==2.0.7
 

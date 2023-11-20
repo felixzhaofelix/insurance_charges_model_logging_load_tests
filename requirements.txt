@@ -135,7 +135,7 @@ executing==2.0.1
     # via
     #   insurance-charges-model
     #   stack-data
-fastapi==0.66.0
+fastapi==0.74.1
     # via
     #   insurance-charges-model
     #   rest-model-service
@@ -670,7 +670,7 @@ stack-data==0.6.3
     # via
     #   insurance-charges-model
     #   ipython
-starlette==0.14.2
+starlette==0.17.1
     # via
     #   fastapi
     #   insurance-charges-model

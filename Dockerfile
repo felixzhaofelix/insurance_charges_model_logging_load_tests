@@ -1,11 +1,4 @@
-# syntax=docker/dockerfile:1
 FROM tiangolo/uvicorn-gunicorn-fastapi:python3.9 as base
-
-WORKDIR /dependencies
-
-# installing git because we need to install the model package from the github repository
-RUN apt-get update -y && \
-    apt-get install -y --no-install-recommends git
 
 # creating and activating a virtual environment
 ENV VIRTUAL_ENV=/opt/venv
@@ -14,7 +7,7 @@ ENV PATH="$VIRTUAL_ENV/bin:$PATH"
 
 # installing dependencies
 COPY ./service_requirements.txt ./service_requirements.txt
-RUN pip install -r service_requirements.txt
+RUN pip install --no-cache -r service_requirements.txt
 
 FROM base as runtime
 
@@ -34,11 +27,24 @@ LABEL org.opencontainers.image.base.name="python:3.9-slim"
 
 WORKDIR /service
 
+#copy Files
+COPY ./insurance_charges_model ./insurance_charges_model
+COPY ./rest_config.yaml ./rest_config.yaml
+COPY ./service_requirements.txt ./service_requirements.txt
+COPY ./kubernetes_rest_config.yaml ./kubernetes_rest_config.yaml
+COPY ./configuration ./configuration
+
+# Expose the port your application runs on
+EXPOSE 8000
+
 # install packages
+
+
 RUN apt-get update -y && \
-    apt-get install -y --no-install-recommends libgomp1 gcc python3-dev && \
+    apt-get install -y --no-install-recommends libgomp1 && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
+
 
 COPY --from=base /opt/venv ./venv
 
@@ -48,4 +54,5 @@ COPY ./LICENSE ./LICENSE
 ENV PATH /service/venv/bin:$PATH
 ENV PYTHONPATH="${PYTHONPATH}:/service"
 
+ENV APP_MODULE=rest_model_service.main:app
 CMD ["uvicorn", "rest_model_service.main:app", "--host", "0.0.0.0", "--port", "8000"]

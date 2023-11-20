@@ -1,16 +1,35 @@
-# Logging for ML Models
+# Logging of Regression Model for Insurance Charges
 
 Logging for machine learning models - Precisely for a model predicting insurance charges
 
-This code is used in this [blog post](https://www.tekhnoal.com/logging-for-ml-models.html).
-
 ## Requirements
 
-- Python 3.5 or above
+- Python 3.9 or above (I used 3.9.6)
 
 ## Installation 
 
 The Makefile included with this project contains targets that help to automate several tasks.
+
+### Theres two part to this installation:
+Start with part 2 first, if all is installed then skip part, if not the insurance charges model's installation is unsuccessful, come back and follow steps in part 1 
+#### Part 1: Requirements for the regression model (insurance charges model)
+Here's what i did:
+This part requires its own dependency management, first to download it:
+
+```bash
+git clone https://github.com/felixzhaofelix/regression-models-fixed
+```
+And follow the instructions on its README.md, here's  a copy of it:
+```bash
+blog_post/README_regression_model.md
+```
+
+```bash
+logging-for-ml-models/blog_post/README_regression-model.md
+```
+Make sure the service can run with successful probes on Docker and then we'll be ready for the next step
+
+#### Part 2: Requirements for the logging decorator
 
 To download the source code execute this command:
 
@@ -29,17 +48,9 @@ make venv
 source venv/bin/activate
 ```
 
-Install the dependencies:
+To install the dependencies:
 
-```bash
-make dependencies
-```
-This logging decorator was used by the author of the repository:
-```bash
-https://github.com/schmidtbri/logging-for-ml-models
-```
-## Usage
-I replaced the credit risk model it was originally used on with the insurance charges model and
+I replaced the credit risk model that was originally used on with the insurance charges model and
 to do so I had first open the file:
 ```bash
 logging-for-ml-models/requirements.in
@@ -51,19 +62,45 @@ and replace the following line:
 ```bash
 -e git+https://github.com/felixzhaofelix/regression-model-fixed#egg=insurance_charges_model
 ```
-and run the following command to install the set of dependencies(the ones you install in the previous step):
+and run the following commands to generate the requirements.txt file
 ```bash
 pip install pip-tools
 pip-compile requirements.in
-pip install -r requirements.txt
 ```
-and of course in the rest of the files I replaced occurrences of credit risk model with insurance charges model.
-As result of such, all dependencies to run the logger and the insruance charges model are installed.
+and run the following command to install the set of dependencies(for regression model and for the logging decorator):
+```bash
+make dependencies
+```
+
+This logging decorator was used by the author of the repository:
+```bash
+https://github.com/schmidtbri/logging-for-ml-models
+```
+and in the rest of the YAML files I replaced occurrences of credit risk model with insurance charges model.
+here are the modified YAML files:
+```bash
+configuration/kubernetes_rest_config.yaml
+configuration/rest_configuration.yaml
+kubernetes/model_service.yaml
+```
+
 We are now ready to tackle the ->
-## -> Integration of the logging decorator to insurance charges model!
+## -> Integration of the logging decorator to insurance charges model
 
 Modifications to make this part run is described in this file:
 ```bash
 logging-for-ml-models/blogpost/blog_post.ipynb
 ```
+
+## Final Note
+Outcomes of my modifications as Nov 2023 for the project "logging-of-regression-model-felixzhaofelix"
+-Successful retraining of insurance-charges-model with R2 value of 0.91
+-Successful local and Docker deployment of insurance-charges-model
+-Successful integration of logging-of-ml-model to insurance-charges-model
+-Successful local and Docker deployment of logging-of-regression-model
+-Successful generation of Docker image for ARM64 platform
+-Pending deployment of logging-of-regression-model on Kubernetes
+
+
+
 
