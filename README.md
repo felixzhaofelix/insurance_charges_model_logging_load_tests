@@ -46,6 +46,11 @@ Quelques captures d'écran de l'exécution du script de test de charge :
 ![External image](https://github.com/uqam-lomagnin/specifications-de-l-evolution-de-l-application-ml-ia_mgl7320_g1/blob/felix_load_tests/images/755_requests_made.png)
 
 ![External image](https://github.com/uqam-lomagnin/specifications-de-l-evolution-de-l-application-ml-ia_mgl7320_g1/blob/felix_load_tests/images/docker_image_receiving_requests.png)
+
+Malheureusement, la fonctionnalité de load test n'a pas pu être intégré au service déployé sur Kubernetes à cause d'un problème de configuration
+sur les serveurs, pour le moment, nous déployons le service sur Docker avec succès, ce qui nous confirme le fonctionnement du code, 
+le déploiement sur Kubernetes est en cours de résolution.
+
 ----------------------------------------------------------------------------------------------------------------------------
 
 
@@ -85,6 +90,8 @@ And follow the instructions on its README.md, here's  a copy of it:
 blog_post/README_regression_model.md
 ```
 [Visit regression-model-fixed](https://github.com/felixzhaofelix/regression-model-fixed/blob/master/README.md)
+
+
 
 
 ```bash
