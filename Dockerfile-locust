@@ -22,5 +22,5 @@ EXPOSE 8089
 RUN ls -l /locust/tests/load_test.py
 
 # Run Locust when the container starts
-CMD ["locust", "-f", "tests/load_test.py", "--host=http://localhost:8000", "--headless", "--loglevel", "ERROR", "--csv=./load_test_report/load_test", "--html", "./load_test_report/load_test_report.html"]
+CMD ["locust", "-f", "tests/load_test.py", "--host=http://127.0.0.1:8000", "--headless", "--loglevel", "ERROR", "--csv=./load_test_report/load_test", "--html", "./load_test_report/load_test_report.html"]
 
