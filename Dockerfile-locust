@@ -9,9 +9,11 @@ RUN apt-get update && apt-get upgrade -y
 RUN apt-get update && apt-get install -y cron
 
 RUN pip install locust
+RUN pip install faker
 
 # Copy the Locust script into the container
 COPY ./tests/load_test.py ./tests/load_test.py
+COPY ./insurance_charges_model ./insurance_charges_model
 
 
 # Expose the port if needed
