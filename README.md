@@ -32,6 +32,19 @@ Les tests de charge sont le processus par lequel nous pouvons vérifier qu'un mo
 
 Détails d'implémentation dans le fichier : load_test.ipynb
 
+Quelques captures d'écran de l'exécution du script de test de charge :
+
+![External image](https://github.com/uqam-lomagnin/specifications-de-l-evolution-de-l-application-ml-ia_mgl7320_g1/blob/felix_load_tests/images/locust_making_requests_to_service.png)
+
+
+![External image](https://github.com/uqam-lomagnin/specifications-de-l-evolution-de-l-application-ml-ia_mgl7320_g1/blob/felix_load_tests/images/service_receiving_requests_from_locust.png)
+
+
+![External image](https://github.com/uqam-lomagnin/specifications-de-l-evolution-de-l-application-ml-ia_mgl7320_g1/blob/felix_load_tests/images/locust_graphs_multiple_users.png)
+
+
+![External image](https://github.com/uqam-lomagnin/specifications-de-l-evolution-de-l-application-ml-ia_mgl7320_g1/blob/felix_load_tests/images/755_requests_made.png)
+
 ----------------------------------------------------------------------------------------------------------------------------
 
 
