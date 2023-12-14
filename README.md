@@ -1,3 +1,48 @@
+Titre: Load test pour le modèle de prédiction avec logger
+
+Date: 14-12-2023
+
+Auteur: Groupe 1 du cours MGL7320
+
+Résumé: Une exigence courante pour les services RESTful est la capacité de continuer à fonctionner tout en étant utilisé par de nombreux utilisateurs simultanément. Dans cet article de blog, nous montrerons comment créer un script de test de charge pour un service de modèle d'apprentissage automatique (ML).
+
+# Testons notre service de prédiction avec des fausses requêtes pour voir sa performance d'accueil les requêtes
+
+## Introduction
+
+Le modèle ML déployé doit répondre aux exigences du système dans lequel il est déployé. Les exigences qu'un système doit remplir sont souvent catégorisées en deux types :
+
+Les exigences fonctionnelles : Les exigences fonctionnelles sont le comportement spécifique qu'un système.
+
+Les exigences non fonctionnelles : Les normes opérationnelles que le système doit respecter pour accomplir ses tâches assignées.
+
+Un exemple d'exigence non fonctionnelle est la latence du système, qui est le temps nécessaire pour qu'un système réponde à une demande de bout en bout.
+Par exemple, nous avons besoin d'un service ML qui fait des prédictions dans 10 ms, sinon, le système n'est pas plus utile en pratique.
+
+Les exigences non fonctionnelles peuvent être formulées en utilisant des INDICATEURS de niveau de service (SLI). Un SLI est une métrique mesurant un aspect de la fonction du système.
+
+Un SLI doit être bien défini et compris à la fois par les clients et les opérateurs d'un système, car il forme la base des objectifs de niveau de service. Quelques exemples de SLI sont la latence, le débit, la disponibilité, le taux d'erreur et la durabilité.
+
+Les OBJECTIFS de niveau de service (SLO) sont des exigences sur le fonctionnement d'un système mesurées à travers les SLI du système. Les SLO sont des moyens définis et convenus pour indiquer quand un système fonctionne en dehors des normes de performance requises.
+
+Par exemple, lors de la mesure de la latence, un SLO valide pourrait être quelque chose comme ceci : "la latence du système ne doit pas dépasser 500 ms pour 90% des demandes". Lors de la mesure des taux d'erreur, un SLO pourrait indiquer "le nombre d'erreurs ne doit pas dépasser 10 pour chaque 10 000 demandes effectuées sur le système".
+
+
+Les tests de charge sont le processus par lequel nous pouvons vérifier qu'un modèle ML déployé en tant que service est capable de respecter le SLA du service tout en étant soumis à une charge. Certains des SLI que nous mesurerons seront la latence, le débit et le taux d'erreur.
+
+Détails d'implémentation dans le fichier : load_test.ipynb
+
+----------------------------------------------------------------------------------------------------------------------------
+
+
+Titre: Logging of Regression Model for Insurance Charges
+
+Date: 19-11-2023
+
+Auteur: Félix Zhao
+
+Résumé: Ajouter la fonctionnalité de logging au modèle de prédiction d'assurance
+
 # Logging of Regression Model for Insurance Charges
 
 Logging for machine learning models - Precisely for a model predicting insurance charges
@@ -194,6 +239,9 @@ Outcomes of my modifications as Nov 2023 for the project "logging-of-regression-
 -Successful generation of Docker image for ARM64 platform
 
 -Pending deployment of logging-of-regression-model on Kubernetes
+
+
+
 
 
 

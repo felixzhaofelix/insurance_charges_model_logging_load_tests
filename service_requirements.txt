@@ -7,4 +7,6 @@
 -e git+https://github.com/felixzhaofelix/regression-model-fixed#egg=insurance_charges_model
     # via -r service_requirements.in
 python-json-logger==2.0.7
+locust==2.20.0
+Faker==21.0.0
 

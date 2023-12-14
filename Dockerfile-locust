@@ -1,0 +1,34 @@
+# Use a lightweight base image
+FROM tiangolo/uvicorn-gunicorn-fastapi:python3.9
+
+# Set the working directory
+WORKDIR /locust
+
+# Install Locust
+RUN apt-get update && apt-get upgrade -y
+RUN apt-get update && apt-get install -y cron
+
+RUN pip install locust
+
+# Copy the Locust script into the container
+COPY ./tests/load_test.py ./tests/load_test.py
+
+
+# Expose the port if needed
+EXPOSE 8089
+
+RUN ls -l /locust/tests/load_test.py
+
+# Run Locust when the container starts
+CMD ["locust", "-f", "test/load_test.py", "--host=http://127.0.0.1:8000", "--headless", "--loglevel", "ERROR", "--csv=./load_test_report/load_test", "--html", "./load_test_report/load_test_report.html"]
+# Copy the run script into the container
+#COPY ./run_locust.sh .
+
+# Make the run script executable
+#RUN chmod +x run_locust.sh
+
+# Schedule the script to run every ten minutes using cron
+#RUN echo "*/10 * * * * /locust/run_locust.sh >> /var/log/cron.log 2>&1" | crontab -
+
+# Start cron in the foreground
+#CMD ["cron", "-f"]
