@@ -45,6 +45,7 @@ Quelques captures d'écran de l'exécution du script de test de charge :
 
 ![External image](https://github.com/uqam-lomagnin/specifications-de-l-evolution-de-l-application-ml-ia_mgl7320_g1/blob/felix_load_tests/images/755_requests_made.png)
 
+![External image](https://github.com/uqam-lomagnin/specifications-de-l-evolution-de-l-application-ml-ia_mgl7320_g1/blob/felix_load_tests/images/docker_image_receiving_requests.png)
 ----------------------------------------------------------------------------------------------------------------------------
 
 
