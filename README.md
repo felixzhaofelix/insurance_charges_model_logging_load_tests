@@ -30,7 +30,10 @@ Par exemple, lors de la mesure de la latence, un SLO valide pourrait être quelq
 
 Les tests de charge sont le processus par lequel nous pouvons vérifier qu'un modèle ML déployé en tant que service est capable de respecter le SLA du service tout en étant soumis à une charge. Certains des SLI que nous mesurerons seront la latence, le débit et le taux d'erreur.
 
-Détails d'implémentation dans le fichier : load_test.ipynb
+Détails d'implémentation dans le fichier : 
+
+https://github.com/uqam-lomagnin/specifications-de-l-evolution-de-l-application-ml-ia_mgl7320_g1/blob/fc8a292141a91309091a947f846afb630115d825/blog_post/load_test.ipynb
+
 
 Quelques captures d'écran de l'exécution du script de test de charge :
 
