@@ -36,19 +36,27 @@ Quelques captures d'écran de l'exécution du script de test de charge :
 
 ![External image](https://github.com/uqam-lomagnin/specifications-de-l-evolution-de-l-application-ml-ia_mgl7320_g1/blob/felix_load_tests/images/locust_making_requests_to_service.png)
 
+- locust faisant des requêtes au service
 
 ![External image](https://github.com/uqam-lomagnin/specifications-de-l-evolution-de-l-application-ml-ia_mgl7320_g1/blob/felix_load_tests/images/service_receiving_requests_from_locust.png)
 
+- le service recevant des requêtes de locust
 
 ![External image](https://github.com/uqam-lomagnin/specifications-de-l-evolution-de-l-application-ml-ia_mgl7320_g1/blob/felix_load_tests/images/locust_graphs_multiple_users.png)
 
+- graphiques de locust avec plusieurs utilisateurs
 
 ![External image](https://github.com/uqam-lomagnin/specifications-de-l-evolution-de-l-application-ml-ia_mgl7320_g1/blob/felix_load_tests/images/755_requests_made.png)
 
+- 755 requêtes effectuées
+- 0 échecs
+
 ![External image](https://github.com/uqam-lomagnin/specifications-de-l-evolution-de-l-application-ml-ia_mgl7320_g1/blob/felix_load_tests/images/docker_image_receiving_requests.png)
 
+- image docker du service recevant des requêtes
+
 Malheureusement, la fonctionnalité de load test n'a pas pu être intégré au service déployé sur Kubernetes à cause d'un problème de configuration
-sur les serveurs, pour le moment, nous déployons le service sur Docker avec succès, ce qui nous confirme le fonctionnement du code, 
+sur les serveurs, pour le moment, nous avons déployé le service sur Docker avec succès, ce qui nous confirme le fonctionnement du code, 
 le déploiement sur Kubernetes est en cours de résolution.
 
 ----------------------------------------------------------------------------------------------------------------------------
