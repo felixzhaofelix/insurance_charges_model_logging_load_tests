@@ -2,7 +2,7 @@ Titre: Load test pour le modèle de prédiction avec logger
 
 Date: 14-12-2023
 
-Auteur: Groupe 1 du cours MGL7320
+Auteur: Félix Zhao
 
 Résumé: Une exigence courante pour les services RESTful est la capacité de continuer à fonctionner tout en étant utilisé par de nombreux utilisateurs simultanément. Dans cet article de blog, nous montrerons comment créer un script de test de charge pour un service de modèle d'apprentissage automatique (ML).
 
