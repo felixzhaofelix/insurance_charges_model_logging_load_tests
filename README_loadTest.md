@@ -2,7 +2,8 @@ Titre: Load test pour le modèle de prédiction avec logger
 
 Date: 14-12-2023
 
-Auteur: Félix Zhao
+Auteur: Félix Zhao (Basé sur le travail de https://github.com/schmidtbri/regression-model et d'autres publications du même auteur)
+
 
 Résumé: Une exigence courante pour les services RESTful est la capacité de continuer à fonctionner tout en étant utilisé par de nombreux utilisateurs simultanément. Dans cet article de blog, nous montrerons comment créer un script de test de charge pour un service de modèle d'apprentissage automatique (ML).
 
